@@ -1,0 +1,36 @@
+
+{
+  "name": "Cordova-multiple-shoot",
+  "version": "0.0.1",
+  "description": "An Android Cordova plugin that allows users to take multiple photo one after one.",
+  "cordova": {
+    "id": "Cordova-multiple-shoot",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adriela/cordova-multiple-shoot.git"
+  },
+  "keywords": [
+    "cordova",
+    "android",
+    "multiple",
+    "camera",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Adriela Ratefiarivony <adrielaratefiarivony@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adriela/cordova-multiple-shoot/issues"
+  },
+  "homepage": "https://github.com/adriela/cordova-multiple-shoot"
+}

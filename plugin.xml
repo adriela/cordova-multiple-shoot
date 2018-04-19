@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+xmlns:android="http://schemas.android.com/apk/res/android"
+id="cordova-multiple-shoot" version="0.0.1">
+    <name>Cordova-multiple-shoot</name>
+    <description>An Android Cordova plugin that allows users to take multiple photo one after one.</description>
+    <license>MIT</license>
+    <keywords>cordova,android,multiple,camera</keywords>
+    <repo>https://github.com/adriela/cordova-multiple-shoot.git</repo>
+    <issue>https://github.com/adriela/cordova-multiple-shoot/issues</issue>
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+    <js-module src="www/CameraMultiple.js" name="cameraMultiple">
+        <clobbers target="window.plugins.cameraMultiple" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="CameraMultiple">
+                <param name="android-package" value="multiple_camera_shoot.cordova.multiple_camera_shoot" />
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:label="Camera Preview" android:name="multiple_camera_shoot.cordova.multiple_camera_shoot.CamActivity"></activity>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/CameraMultiple.java" target-dir="src/multiple_camera_shoot/cordova/multiple_camera_shoot" />
+        <source-file src="src/android/CamActivity.java" target-dir="src/multiple_camera_shoot/cordova/multiple_camera_shoot" />
+        <source-file src="src/android/activity_cam.xml" target-dir="res/layout"/>
+        <source-file src="src/android/image_layout.xml" target-dir="res/layout"/>
+        <resource-file src="src/android/close.png" target-dir="res/drawable/close.png"/>
+    </platform>
+</plugin>
