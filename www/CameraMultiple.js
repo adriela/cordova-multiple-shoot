@@ -2,7 +2,7 @@ function CameraMultiple() {}
 
 CameraMultiple.prototype.takePicture = function(successCallback, errorCallback) {
   var options = {};
-  cordova.exec(successCallback, errorCallback, 'ToastyPlugin', 'show', [options]);
+  cordova.exec(successCallback, errorCallback, 'CameraMultiple', 'takePicture', [options]);
 }
 
 CameraMultiple.install = function() {
